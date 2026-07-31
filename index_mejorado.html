@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para Mi Amor 💛</title>
+<style>
+body{margin:0;overflow:hidden;background:linear-gradient(#7ec8ff,#fff6b0);font-family:Georgia;display:flex;justify-content:center;align-items:center;height:100vh}
+.card{background:rgba(255,255,255,.88);padding:30px;border-radius:22px;max-width:700px;text-align:center;box-shadow:0 0 30px rgba(0,0,0,.2)}
+h1{color:#d4a000}.heart{font-size:42px;animation:b 1s infinite}@keyframes b{50%{transform:scale(1.2)}}
+.fl,.msg{position:fixed;pointer-events:none;animation:fall linear forwards}.fl{font-size:28px}.msg{color:#fff;font-weight:bold;text-shadow:0 0 8px #000}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+</style></head><body>
+<div class='card'><h1>🌼 Para Mi Amor 🌼</h1><p>Las flores amarillas son un pequeño detalle para recordarte lo especial que eres.</p><p><b>Te amo hoy, mañana y siempre. 💛</b></p><div class='heart'>❤️</div></div>
+<script>
+const frases=["Eres mi lugar favorito ❤️","Siempre tú 💛","Mi persona favorita 🌼","Gracias por existir ✨","Te amo muchísimo 🥰","Contigo todo es mejor 💕"];
+function flor(){let d=document.createElement('div');d.className='fl';d.textContent='🌼';d.style.left=Math.random()*100+'vw';d.style.top='-30px';d.style.animationDuration=(4+Math.random()*4)+'s';document.body.appendChild(d);setTimeout(()=>d.remove(),8000)}
+function frase(){let d=document.createElement('div');d.className='msg';d.textContent=frases[Math.floor(Math.random()*frases.length)];d.style.left=Math.random()*80+'vw';d.style.top=(20+Math.random()*60)+'vh';d.style.fontSize=(18+Math.random()*10)+'px';document.body.appendChild(d);setTimeout(()=>d.remove(),3000)}
+setInterval(flor,180);setInterval(frase,1800);
+</script></body></html>
