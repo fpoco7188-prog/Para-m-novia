@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Para mi novia</title><style>
+body{margin:0;overflow:hidden;font-family:Arial;background:linear-gradient(#ffd6e7,#fff);}
+#bg{position:fixed;inset:0}.f{position:absolute;top:-10vh;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(120vh)}}
+.wrap{display:flex;justify-content:center;align-items:center;height:100vh}
+.env{position:relative;width:340px;height:240px;cursor:pointer}
+.flap{position:absolute;left:0;right:0;top:0;height:120px;background:#ffb6d9;clip-path:polygon(0 0,50% 100%,100% 0);transform-origin:top;transition:1s}
+.base{position:absolute;bottom:0;width:100%;height:170px;background:#ffe6f1;border-radius:0 0 20px 20px}
+.letter{position:absolute;left:20px;right:20px;bottom:20px;height:170px;background:#fff;border-radius:15px;padding:18px;overflow:auto;transform:translateY(70px);transition:1s;opacity:0}
+.open .flap{transform:rotateX(180deg)} .open .letter{transform:translateY(-120px);opacity:1;height:340px}
+h1{text-align:center;color:#d84f8d} .k{text-align:center;font-size:26px}
+</style></head><body><div id='bg'></div><div class='wrap'><div class='env' id='e'><div class='flap'></div><div class='base'></div><div class='letter'><div class='k'>🎀🌸🐾🩷</div><h1>Para mi novia</h1><p>Eres mi todo. Gracias por llegar a mi vida y llenarla de felicidad. Tu sonrisa ilumina mis días y tu amor hace que mi corazón se sienta en casa.</p><p>Te amo con todo mi corazón. Gracias por cada abrazo, por cada palabra bonita y por estar conmigo incluso en los momentos difíciles.</p><p>Quiero todo contigo: reír, viajar, cumplir sueños, crear recuerdos y seguir escribiendo nuestra historia día tras día.</p><p>Prometo seguir eligiéndote siempre, cuidarte, apoyarte y recordarte todos los días lo especial que eres para mí.</p><p>Te amo infinitamente. 💛❤️</p></div></div></div>
+<script>
+const bg=document.getElementById('bg');
+['🌼','❤️','🎀'].forEach((em,n)=>{for(let i=0;i<20;i++){let d=document.createElement('div');d.className='f';d.textContent=em;d.style.left=Math.random()*100+'vw';d.style.fontSize=(18+Math.random()*18)+'px';let dur=6+Math.random()*7;d.style.animationDuration=dur+'s';d.style.animationDelay=(-Math.random()*dur)+'s';bg.appendChild(d);}});
+e.onclick=()=>e.classList.toggle('open');
+</script></body></html>
